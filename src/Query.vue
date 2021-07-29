@@ -27,7 +27,7 @@ export default {
       // pollInterval: 100
     })
     
-    // I also tried updating the cache, but no luck. It won't reactively update! WTF!!
+    // I also tried updating the cache in Mutation.vue, but no luck. It won't reactively update! WTF!!
     /*
     update: (cache, { data: { addBook } }) => {
         const { books } = cache.readQuery({ query: bookQuery }) as any
