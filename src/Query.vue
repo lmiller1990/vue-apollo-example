@@ -26,6 +26,16 @@ export default {
       // how is it supposed to know??
       // pollInterval: 100
     })
+    
+    // I also tried updating the cache, but no luck. It won't reactively update! WTF!!
+    /*
+    update: (cache, { data: { addBook } }) => {
+        const { books } = cache.readQuery({ query: bookQuery }) as any
+        const newData =  [...books, addBook]
+        console.log({ newData })
+        cache.writeQuery({ query: bookQuery, data: newData });
+    }
+    */
 
     const books = useResult(booksResult, data => data.books)
 
